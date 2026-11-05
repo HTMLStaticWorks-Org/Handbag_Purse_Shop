@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velora - Luxury Handbag Gifting &amp; Monogrammed Gift Sets</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="shortcut icon" href="favicon.svg">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+  
+  <!-- Tailwind CSS 3 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              light: '#fff1f2',
+              dark: '#121212',
+              primary: '#e11d48',
+              primaryHover: '#be123c',
+              secondary: '#000000',
+              secondaryHover: '#1a1a1a',
+              accent: '#fb7185',
+              navy: '#1a1a1d',
+            },
+            slate: {
+              50: '#fafafa',
+              100: '#f4f4f5',
+              200: '#e4e4e7',
+              300: '#d4d4d8',
+              400: '#a1a1aa',
+              500: '#71717a',
+              600: '#52525b',
+              700: '#3f3f46',
+              800: '#27272a',
+              855: '#18181b',
+              900: '#121212',
+              950: '#0a0a0a',
+              955: '#050505',
+            }
+          },
+          fontFamily: {
+            sans: ['Open Sans', 'sans-serif'],
+            outfit: ['Bebas Neue', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-955 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="glass-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-white shadow-lg shadow-rose-500/25 group-hover:scale-105 transition-transform duration-300">
+            <i data-lucide="shopping-bag" class="w-7 h-7"></i>
+          </div>
+          <span class="font-outfit text-3xl sm:text-4xl font-extrabold tracking-wider text-slate-900 dark:text-white group-hover:text-brand-primary transition-colors">
+            Vel<span class="text-brand-primary">ora</span>
+          </span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center space-x-1 rtl:space-x-reverse">
+          <a href="index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-rose-400 transition-colors">Home</a>
+          <a href="home2.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-rose-400 transition-colors">Home 2</a>
+          <a href="about.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-rose-400 transition-colors">About</a>
+          <a href="services.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-rose-400 transition-colors">Products</a>
+          <a href="gallery.html" class="px-3 py-2 rounded-lg text-sm font-semibold transition-colors text-brand-primary dark:text-rose-400">Gifting</a>
+          <a href="blog.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-rose-400 transition-colors">Blog</a>
+          <a href="contact.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-primary dark:text-slate-300 dark:hover:text-rose-400 transition-colors">Contact</a>
+        </div>
+
+        <!-- Desktop Utility Buttons -->
+        <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+          
+          <!-- RTL Toggle -->
+          <button class="rtl-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-655 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center" aria-label="Toggle Direction">
+            <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+          </button>
+          
+          <!-- Theme Toggle -->
+          <button class="theme-toggle w-10 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-655 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center" aria-label="Toggle Theme">
+            <i data-lucide="sun" class="sun-icon w-5 h-5 hidden"></i>
+            <i data-lucide="moon" class="moon-icon w-5 h-5"></i>
+          </button>
+
+          <a href="enquire.html" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold hover:shadow-lg hover:shadow-rose-500/25 transition-all transform hover:-translate-y-0.5">Enquire</a>
+        </div>
+
+        <!-- Mobile Navigation Menu Toggle Button -->
+        <div class="flex items-center space-x-3 lg:hidden rtl:space-x-reverse">
+          <button id="mobile-menu-btn" class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-605 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Open Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Slide Down Menu -->
+    <div id="mobile-menu" class="hidden absolute top-20 left-0 right-0 glass-nav shadow-lg flex-col px-4 pt-4 pb-6 space-y-3 transition-all duration-300 transform opacity-0 -translate-y-4">
+      <a href="index.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Home</a>
+      <a href="home2.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Home 2</a>
+      <a href="about.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">About</a>
+      <a href="services.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Products</a>
+      <a href="gallery.html" class="px-3 py-2 rounded-lg text-base font-semibold text-brand-primary bg-rose-50/50 dark:bg-rose-955/20">Gifting</a>
+      <a href="blog.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Blog</a>
+      <a href="contact.html" class="px-3 py-2 rounded-lg text-base font-medium text-slate-655 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Contact</a>
+      <div class="h-[1px] bg-slate-200 dark:bg-slate-800 my-2"></div>
+      <div class="flex items-center justify-between space-x-3 rtl:space-x-reverse pt-1 pb-2">
+        <!-- Mobile RTL Toggle -->
+        <button class="rtl-toggle flex-1 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center bg-white dark:bg-slate-900" aria-label="Toggle Direction">
+          <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+        </button>
+        <!-- Mobile Theme Toggle -->
+        <button class="theme-toggle flex-1 h-10 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-655 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center space-x-2 bg-white dark:bg-slate-900" aria-label="Toggle Theme">
+          <i data-lucide="sun" class="sun-icon w-4 h-4 hidden"></i>
+          <i data-lucide="moon" class="moon-icon w-4 h-4"></i>
+          <span class="text-xs font-bold tracking-wider dark:hidden">Dark Mode</span>
+          <span class="text-xs font-bold tracking-wider hidden dark:inline">Light Mode</span>
+        </button>
+      </div>
+      <div class="flex flex-col space-y-2.5">
+        <a href="enquire.html" class="text-center px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-semibold shadow-md shadow-rose-500/20">Enquire</a>
+      </div>
+      <button id="mobile-menu-close" class="absolute top-2 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-grow pt-20">
+    
+    <!-- 1. Hero Section -->
+    <section class="relative py-12 md:py-16 overflow-hidden text-white bg-slate-955 page-hero border-b border-slate-800/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Left: Title, Tag, and Description -->
+          <div class="lg:col-span-7 space-y-4 text-left ltr:text-left rtl:text-right animate-fade-in-up">
+            <span class="text-rose-400 font-semibold uppercase tracking-wider text-xs sm:text-sm">The Art of Gifting</span>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-outfit text-white leading-tight uppercase tracking-wider">
+              Luxury Handbag Gifting &amp; Bespoke Gift Boxes
+            </h1>
+            <p class="text-slate-300 max-w-xl text-xs sm:text-sm md:text-base font-normal leading-relaxed font-sans">
+              Celebrate weddings, anniversaries, milestones, and executive achievements with monogrammed totes, evening clutches, and leather backpacks in signature keepsake boxes.
+            </p>
+          </div>
+
+          <!-- Right: Separate Image -->
+          <div class="lg:col-span-5 flex justify-center lg:justify-end animate-fade-in-up">
+            <div class="relative w-full max-w-md rounded-2xl overflow-hidden shadow-2xl border border-slate-800/80 group">
+              <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&q=80&w=800" 
+                   alt="Velora Luxury Handbag Gifting Suite &amp; Keepsake Boxes" 
+                   class="w-full h-52 sm:h-60 md:h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Gifting Presentation Transformations (Standard vs Luxury Unboxing) -->
+    <section class="py-16 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <span class="text-brand-primary font-semibold uppercase tracking-wider text-sm font-outfit">Unforgettable Unboxing</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white font-outfit tracking-wider">Our Luxury Gifting Experience</h2>
+          <p class="text-slate-655 dark:text-slate-350 text-xs sm:text-sm font-normal">
+            See how we elevate every handbag gift from ordinary retail packaging into an heirloom presentation with silk dust bags and 18k gold monogramming.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          
+          <!-- Case 1: Gift Packaging -->
+          <div class="space-y-4 text-left ltr:text-left rtl:text-right">
+            <h3 class="font-bold text-slate-900 dark:text-white text-xl font-outfit tracking-wider">Presentation Upgrade: Standard Box vs Keepsake Suite</h3>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Before -->
+              <div class="glass-card rounded-2xl overflow-hidden border border-rose-100 dark:border-rose-955/20">
+                <div class="h-64 overflow-hidden relative">
+                  <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=700" alt="Standard retail parcel" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                  <h4 class="font-bold text-sm text-slate-900 dark:text-white mb-1 font-outfit tracking-wider">Ordinary Retail Box</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 font-normal leading-relaxed">Basic folding carton without dust protection, moisture barriers, or personalized keepsake presentation.</p>
+                </div>
+              </div>
+              
+              <!-- After -->
+              <div class="glass-card rounded-2xl overflow-hidden border border-emerald-100 dark:border-emerald-955/20">
+                <div class="h-64 overflow-hidden relative">
+                  <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&q=80&w=700" alt="Velora Magnetic Keepsake Gift Box" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                  <h4 class="font-bold text-sm text-slate-900 dark:text-white mb-1 font-outfit tracking-wider">Velora Magnetic Gift Box</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 font-normal leading-relaxed">Linen-wrapped magnetic keepsake box tied with grosgrain satin ribbon, breathable silk dust bag, and wax-sealed note.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 2: Monogramming -->
+          <div class="space-y-4 text-left ltr:text-left rtl:text-right">
+            <h3 class="font-bold text-slate-900 dark:text-white text-xl font-outfit tracking-wider">Personalization: Classic Purse to Gold-Foil Monogram</h3>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Before -->
+              <div class="glass-card rounded-2xl overflow-hidden border border-rose-100 dark:border-rose-955/20">
+                <div class="h-64 overflow-hidden relative">
+                  <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&q=80&w=700" alt="Classic unmonogrammed tote" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                  <h4 class="font-bold text-sm text-slate-900 dark:text-white mb-1 font-outfit tracking-wider">Signature Boutique Bag</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 font-normal leading-relaxed">Our iconic full-grain calfskin silhouette in its pure, minimalist atelier finish ready for everyday wear.</p>
+                </div>
+              </div>
+              
+              <!-- After -->
+              <div class="glass-card rounded-2xl overflow-hidden border border-emerald-100 dark:border-emerald-955/20">
+                <div class="h-64 overflow-hidden relative">
+                  <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=700" alt="Monogrammed luxury leather handbag with gold hardware" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                  <h4 class="font-bold text-sm text-slate-900 dark:text-white mb-1 font-outfit tracking-wider">Bespoke Monogrammed Edition</h4>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 font-normal leading-relaxed">Hand-stamped with 18k gold or rose-gold foil initials on the leather clochette and paired with a matching cardholder.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Curated Gifting Suites Section -->
+    <section class="py-16 bg-slate-50 dark:bg-slate-955">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <span class="text-brand-primary font-semibold uppercase tracking-wider text-sm font-outfit">Curated by Occasion</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white font-outfit tracking-wider">Handbag Gift Collections for Every Milestone</h2>
+          <p class="text-slate-655 dark:text-slate-350 text-xs sm:text-sm font-normal">
+            Explore our six signature gifting suites tailored for weddings, anniversaries, graduations, and luxury corporate appreciation.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Card 1 -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-md">
+            <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&q=80&w=800" 
+                 alt="Anniversary Evening Clutch Gift Box" 
+                 class="h-72 w-full object-cover">
+            <div class="p-6 text-left ltr:text-left rtl:text-right">
+              <h4 class="font-bold text-slate-900 dark:text-white mb-2 font-outfit tracking-wider">Anniversary Soirée Clutch Suite</h4>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">
+                Our Celestia Velvet or Quilted Lambskin Evening Clutch paired with a detachable 18k gold chain and a custom love note sealed in rose wax.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-md">
+            <img src="https://images.unsplash.com/photo-1614179689702-355944cd0918?auto=format&fit=crop&q=80&w=800" 
+                 alt="Bridal and Bridesmaid Clutch Gift Set" 
+                 class="h-72 w-full object-cover">
+            <div class="p-6 text-left ltr:text-left rtl:text-right">
+              <h4 class="font-bold text-slate-900 dark:text-white mb-2 font-outfit tracking-wider">Bridal &amp; Bridesmaid Purse Set</h4>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">
+                Coordinated pearl-white and blush rose minaudière clutches individually monogrammed with each bridesmaid's initials for wedding day memories.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-md">
+            <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=800" 
+                 alt="Career Milestone Structured Tote Gift" 
+                 class="h-72 w-full object-cover">
+            <div class="p-6 text-left ltr:text-left rtl:text-right">
+              <h4 class="font-bold text-slate-900 dark:text-white mb-2 font-outfit tracking-wider">Career Milestone Tote Gift Box</h4>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">
+                Celebrate promotions and graduations with the Aurelia Structured Work Tote, complete with a matching leather business card folio.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-md">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=800" 
+                 alt="Jetsetter Leather Backpack Gift Edition" 
+                 class="h-72 w-full object-cover">
+            <div class="p-6 text-left ltr:text-left rtl:text-right">
+              <h4 class="font-bold text-slate-900 dark:text-white mb-2 font-outfit tracking-wider">First-Class Traveler Backpack</h4>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">
+                The Verona Convertible Leather Backpack bundled with an RFID passport cover and monogrammed luggage tag for the luxury globetrotter.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-md">
+            <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&q=80&w=800" 
+                 alt="Birthday Satchel and Silk Twilly Gift" 
+                 class="h-72 w-full object-cover">
+            <div class="p-6 text-left ltr:text-left rtl:text-right">
+              <h4 class="font-bold text-slate-900 dark:text-white mb-2 font-outfit tracking-wider">Birthday Satchel &amp; Silk Twilly</h4>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">
+                A sculpted top-handle crossbody purse with a hand-rolled Como silk twilly ribbon wrapped delicately around the leather handle.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="glass-card rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-md">
+            <img src="https://images.unsplash.com/photo-1600857062241-98e5dba7f214?auto=format&fit=crop&q=80&w=800" 
+                 alt="Corporate Executive Luxury Gifting" 
+                 class="h-72 w-full object-cover">
+            <div class="p-6 text-left ltr:text-left rtl:text-right">
+              <h4 class="font-bold text-slate-900 dark:text-white mb-2 font-outfit tracking-wider">Executive &amp; VIP Client Gifting</h4>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal">
+                Bespoke corporate gifting programs featuring subtle interior blind-embossing, recipient initials, and direct multi-address courier delivery.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Gifting Concierge Services Showcase -->
+    <section class="py-16 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <span class="text-brand-primary font-semibold uppercase tracking-wider text-sm font-outfit">Complimentary Touches</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white font-outfit tracking-wider">Signature Gifting Concierge Services</h2>
+          <p class="text-slate-655 dark:text-slate-350 text-xs sm:text-sm font-normal">
+            Every gift order placed at Velora includes bespoke personalization and white-glove presentation at no additional cost.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Feature 1 -->
+          <div class="p-6 bg-slate-50 dark:bg-slate-955 rounded-2xl border border-slate-100 dark:border-slate-900 text-center space-y-3">
+            <div class="w-12 h-12 bg-white dark:bg-slate-900 text-brand-primary rounded-xl flex items-center justify-center mx-auto shadow-sm">
+              <i data-lucide="sparkles" class="w-6 h-6"></i>
+            </div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-base font-outfit tracking-wider">Gold-Foil Monogram</h4>
+            <p class="text-xs text-slate-400 font-normal">
+              Complimentary hot-stamped initials in 18k gold, rose-gold, or blind embossing on leather tags.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="p-6 bg-slate-50 dark:bg-slate-955 rounded-2xl border border-slate-100 dark:border-slate-900 text-center space-y-3">
+            <div class="w-12 h-12 bg-white dark:bg-slate-900 text-brand-primary rounded-xl flex items-center justify-center mx-auto shadow-sm">
+              <i data-lucide="gift" class="w-6 h-6"></i>
+            </div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-base font-outfit tracking-wider">Magnetic Keepsake Box</h4>
+            <p class="text-xs text-slate-400 font-normal">
+              Housed in a rigid linen presentation box with a satin bow and breathable silk storage dust bag.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="p-6 bg-slate-50 dark:bg-slate-955 rounded-2xl border border-slate-100 dark:border-slate-900 text-center space-y-3">
+            <div class="w-12 h-12 bg-white dark:bg-slate-900 text-brand-primary rounded-xl flex items-center justify-center mx-auto shadow-sm">
+              <i data-lucide="feather" class="w-6 h-6"></i>
+            </div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-base font-outfit tracking-wider">Calligraphy Gift Card</h4>
+            <p class="text-xs text-slate-400 font-normal">
+              Your personal message is inscribed on heavy cotton stationery and sealed with a rose-gold wax crest.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="p-6 bg-slate-50 dark:bg-slate-955 rounded-2xl border border-slate-100 dark:border-slate-900 text-center space-y-3">
+            <div class="w-12 h-12 bg-white dark:bg-slate-900 text-brand-primary rounded-xl flex items-center justify-center mx-auto shadow-sm">
+              <i data-lucide="truck" class="w-6 h-6"></i>
+            </div>
+            <h4 class="font-bold text-slate-900 dark:text-white text-base font-outfit tracking-wider">Scheduled Gift Delivery</h4>
+            <p class="text-xs text-slate-400 font-normal">
+              Choose your exact arrival date with insured white-glove courier tracking and gift-receipt exchanges.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. Client Testimonials Section -->
+    <section class="py-20 bg-slate-50 dark:bg-slate-955 border-t border-slate-100 dark:border-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <span class="text-brand-primary font-semibold uppercase tracking-wider text-sm">Gifting Stories</span>
+          <h2 class="text-3xl md:text-4xl font-bold font-outfit text-slate-900 dark:text-white">
+            Unforgettable Gifting Moments
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 font-normal">
+            Read stories from clients who surprised their loved ones, bridal parties, and executives with Velora luxury handbag gifts.
+          </p>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Testimonial 1 -->
+          <div class="glass-card p-8 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-800 flex flex-col justify-between text-left ltr:text-left rtl:text-right hover:-translate-y-1 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse text-rose-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[11px] font-bold text-brand-primary bg-rose-50 dark:bg-rose-950/40 px-2.5 py-1 rounded-full uppercase">Bridal Party</span>
+              </div>
+              <p class="text-sm italic text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                "I ordered six monogrammed Celestia Clutches for my bridesmaids in Lake Como. Each box arrived with a wax-sealed calligraphy note and silk dust bag—my bridal party was speechless!"
+              </p>
+            </div>
+            <div class="flex items-center space-x-3 rtl:space-x-reverse pt-4 border-t border-slate-100 dark:border-slate-800">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=200" alt="Arabella Fontaine" class="w-11 h-11 rounded-full object-cover border-2 border-brand-primary/30 flex-shrink-0">
+              <div>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white">Arabella Fontaine</h4>
+                <p class="text-xs text-slate-400">Bride &amp; Collector, San Francisco</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="glass-card p-8 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-800 flex flex-col justify-between text-left ltr:text-left rtl:text-right hover:-translate-y-1 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse text-rose-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[11px] font-bold text-brand-primary bg-rose-50 dark:bg-rose-950/40 px-2.5 py-1 rounded-full uppercase">10th Anniversary</span>
+              </div>
+              <p class="text-sm italic text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                "Velora's gifting concierge helped me pick the Aurelia Tote &amp; Silk Twilly set for our 10th anniversary. The magnetic keepsake box and gold-foil initials made it the most memorable gift I've ever given."
+              </p>
+            </div>
+            <div class="flex items-center space-x-3 rtl:space-x-reverse pt-4 border-t border-slate-100 dark:border-slate-800">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" alt="Marcus Hawthorne" class="w-11 h-11 rounded-full object-cover border-2 border-brand-primary/30 flex-shrink-0">
+              <div>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white">Marcus Hawthorne</h4>
+                <p class="text-xs text-slate-400">Managing Partner, Zurich</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="last-card-md glass-card p-8 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-800 flex flex-col justify-between text-left ltr:text-left rtl:text-right hover:-translate-y-1 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse text-rose-400">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-[11px] font-bold text-brand-primary bg-rose-50 dark:bg-rose-950/40 px-2.5 py-1 rounded-full uppercase">Executive Gifting</span>
+              </div>
+              <p class="text-sm italic text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+                "We gifted 25 Verona Convertible Leather Backpacks to our senior partners for our annual summit. Every backpack had custom monogrammed luggage tags and arrived on schedule."
+              </p>
+            </div>
+            <div class="flex items-center space-x-3 rtl:space-x-reverse pt-4 border-t border-slate-100 dark:border-slate-800">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="Simone Laurent-Vega" class="w-11 h-11 rounded-full object-cover border-2 border-brand-primary/30 flex-shrink-0">
+              <div>
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white">Simone Laurent-Vega</h4>
+                <p class="text-xs text-slate-400">VP of Brand Experience, New York</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="glass-footer py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
+        
+        <!-- Brand Info -->
+        <div class="md:col-span-1 lg:col-span-4 space-y-4 text-left rtl:text-right">
+          <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-accent flex items-center justify-center text-white shadow-lg shadow-rose-500/25 group-hover:scale-105 transition-transform duration-300">
+              <i data-lucide="shopping-bag" class="w-7 h-7"></i>
+            </div>
+            <span class="font-outfit text-3xl sm:text-4xl font-extrabold tracking-wider text-slate-900 dark:text-white group-hover:text-brand-primary transition-colors">
+              Vel<span class="text-brand-primary">ora</span>
+            </span>
+          </a>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+            Artisan Italian leather handbags and purses. Discover trending structured totes, sculpted evening clutches, convertible backpacks, and bespoke luxury gifting sets.
+          </p>
+          
+          <!-- Social Icons -->
+          <div class="flex items-center space-x-3 rtl:space-x-reverse pt-2">
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="Facebook">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="X (formerly Twitter)">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="LinkedIn">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" class="w-9 h-9 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-brand-primary hover:text-white transition-all duration-300" aria-label="Instagram">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Menu Links -->
+        <div class="md:col-span-1 lg:col-span-2 space-y-4 text-left rtl:text-right">
+          <h4 class="text-slate-900 dark:text-white font-bold text-sm uppercase tracking-wider font-outfit">Bag Collections</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Structured Totes</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Evening Clutches</a></li>
+            <li><a href="services.html" class="hover:text-brand-primary transition-colors">Leather Backpacks</a></li>
+            <li><a href="gallery.html" class="hover:text-brand-primary transition-colors text-brand-primary">Luxury Gift Sets</a></li>
+          </ul>
+        </div>
+
+        <!-- Company / Info Links -->
+        <div class="md:col-span-1 lg:col-span-2 space-y-4 text-left rtl:text-right">
+          <h4 class="text-slate-900 dark:text-white font-bold text-sm uppercase tracking-wider font-outfit">Maison Velora</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li><a href="index.html" class="hover:text-brand-primary transition-colors">Home</a></li>
+            <li><a href="home2.html" class="hover:text-brand-primary transition-colors">Home 2</a></li>
+            <li><a href="about.html" class="hover:text-brand-primary transition-colors">About</a></li>
+            <li><a href="enquire.html" class="hover:text-brand-primary transition-colors">Enquire</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacts and Hours -->
+        <div class="md:col-span-1 lg:col-span-4 space-y-4 text-left rtl:text-right">
+          <h4 class="text-slate-900 dark:text-white font-bold text-sm uppercase tracking-wider font-outfit">Boutique &amp; Concierge</h4>
+          <ul class="space-y-2.5 text-sm font-medium">
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span>+1 (800) 555-VELO</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="mail" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span class="break-all">concierge@velorabags.com</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i data-lucide="clock" class="w-4 h-4 text-brand-primary flex-shrink-0"></i>
+              <span>Mon - Sat: 10:00 AM - 7:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright row -->
+      <div class="footer-copyright pt-8 border-t flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm font-medium">
+        <p>&copy; 2026 Velora Handbag &amp; Purse Boutique. All rights reserved.</p>
+        <div class="flex items-center space-x-4 rtl:space-x-reverse mt-4 sm:mt-0">
+          <a href="#" class="hover:text-slate-900 dark:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-900 dark:text-white transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="main.js"></script>
+</body>
+</html>
