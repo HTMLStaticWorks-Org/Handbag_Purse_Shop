@@ -60,30 +60,30 @@
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-955 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
 
-  <!-- ================= HEADER & NAVIGATION ================= -->
+    <!-- ================= HEADER & NAVIGATION ================= -->
   <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
     
     <!-- Top Luxury Announcement Ribbon -->
-    <div class="bg-slate-955 text-slate-300 dark:bg-black dark:text-slate-300 border-b border-rose-500/10 dark:border-white/5 py-1.5 px-4 text-xs tracking-wide">
-      <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <div class="bg-slate-955 text-slate-300 dark:bg-black dark:text-slate-300 border-b border-rose-500/10 dark:border-white/5 py-1.5 px-3 sm:px-4 text-xs tracking-wide overflow-hidden">
+      <div class="max-w-7xl mx-auto flex items-center justify-center sm:justify-between">
         
         <!-- Left: Perks with sparkles -->
-        <div class="flex items-center space-x-2.5 rtl:space-x-reverse text-[11px] sm:text-xs">
-          <span class="inline-flex items-center text-rose-400 font-semibold">
-            <i data-lucide="sparkles" class="w-3.5 h-3.5 mr-1.5 rtl:ml-1.5 rtl:mr-0 text-brand-primary"></i>
-            Complimentary Insured Courier &amp; Monogramming
+        <div class="flex items-center space-x-2 rtl:space-x-reverse text-[11px] sm:text-xs truncate">
+          <span class="inline-flex items-center text-rose-400 font-semibold truncate">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 mr-1.5 rtl:ml-1.5 rtl:mr-0 text-brand-primary flex-shrink-0"></i>
+            <span class="truncate">Complimentary Insured Courier &amp; Monogramming</span>
           </span>
           <span class="hidden md:inline text-slate-600 dark:text-slate-700">•</span>
           <span class="hidden md:inline text-slate-400">450 Madison Ave Flagship Atelier</span>
         </div>
 
         <!-- Right: Atelier Hotline & Hours -->
-        <div class="flex items-center space-x-4 rtl:space-x-reverse text-[11px] sm:text-xs">
-          <a href="tel:+18005558356" class="hover:text-rose-400 transition-colors hidden sm:flex items-center space-x-1.5 rtl:space-x-reverse text-slate-300 dark:text-slate-400">
+        <div class="hidden sm:flex items-center space-x-4 rtl:space-x-reverse text-[11px] sm:text-xs flex-shrink-0">
+          <a href="tel:+18005558356" class="hover:text-rose-400 transition-colors flex items-center space-x-1.5 rtl:space-x-reverse text-slate-300 dark:text-slate-400">
             <i data-lucide="phone" class="w-3 h-3 text-rose-400"></i>
             <span>+1 (800) 555-VELO</span>
           </a>
-          <span class="hidden sm:inline text-slate-700">|</span>
+          <span class="text-slate-700">|</span>
           <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             <span class="text-slate-300 dark:text-slate-400">Mon - Sat: 10AM - 7PM</span>
@@ -99,10 +99,10 @@
         <div class="flex items-center justify-between h-20">
           
           <!-- Brand Logo -->
-          <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group">
-            <div class="relative w-11 h-11 rounded-full p-[2px] bg-gradient-to-tr from-brand-primary via-rose-400 to-amber-300 shadow-md shadow-rose-500/20 group-hover:shadow-rose-500/40 transition-all">
+          <a href="index.html" class="flex items-center space-x-2.5 sm:space-x-3 rtl:space-x-reverse group flex-shrink-0">
+            <div class="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full p-[2px] bg-gradient-to-tr from-brand-primary via-rose-400 to-amber-300 shadow-md shadow-rose-500/20 group-hover:shadow-rose-500/40 transition-all flex-shrink-0">
               <div class="w-full h-full rounded-full bg-slate-955 dark:bg-slate-900 flex items-center justify-center text-rose-400 group-hover:scale-105 transition-transform">
-                <i data-lucide="shopping-bag" class="w-5 h-5 text-rose-300"></i>
+                <i data-lucide="shopping-bag" class="w-4 h-4 sm:w-5 sm:h-5 text-rose-300"></i>
               </div>
             </div>
             <div class="flex flex-col text-left ltr:text-left rtl:text-right">
@@ -148,11 +148,8 @@
           </div>
 
           <!-- Mobile Navigation Menu Toggle Button -->
-          <div class="flex items-center space-x-2 lg:hidden rtl:space-x-reverse">
-            <a href="enquire.html" class="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent text-white text-xs font-bold uppercase tracking-wider shadow-sm">
-              Enquire
-            </a>
-            <button id="mobile-menu-btn" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Open Menu">
+          <div class="flex items-center lg:hidden">
+            <button id="mobile-menu-btn" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex-shrink-0" aria-label="Open Menu">
               <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
           </div>
@@ -185,7 +182,7 @@
         <div class="flex flex-col pt-1">
           <a href="enquire.html" class="text-center px-4 py-3 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-bold uppercase tracking-wider shadow-md shadow-rose-500/25">Enquire</a>
         </div>
-        <button id="mobile-menu-close" class="absolute top-3 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white" aria-label="Close Menu">
+        <button id="mobile-menu-close" class="absolute top-3 right-4 rtl:right-auto rtl:left-4 text-slate-400 hover:text-slate-600 dark:hover:text-white" aria-label="Close Menu">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
@@ -243,7 +240,7 @@
 
           <!-- Right Visual Column (Floating Collage) -->
           <div class="lg:col-span-5 relative mt-8 lg:mt-0 flex justify-center">
-            <div class="relative w-full max-w-[340px] sm:max-w-[400px] md:max-w-[460px] lg:max-w-[360px] xl:max-w-[460px] h-[380px] sm:h-[450px] md:h-[510px] lg:h-[400px] xl:h-[510px]">
+            <div class="relative w-full max-w-[290px] sm:max-w-[400px] md:max-w-[460px] lg:max-w-[360px] xl:max-w-[460px] h-[340px] sm:h-[450px] md:h-[510px] lg:h-[400px] xl:h-[510px]">
               
               <!-- Background glowing circle -->
               <div class="absolute inset-0 bg-gradient-to-tr from-brand-primary/20 to-brand-accent/20 rounded-full blur-3xl -z-10"></div>
@@ -565,7 +562,7 @@
             <!-- Slide 1 -->
             <div class="weekly-special-slide opacity-100 duration-500 flex flex-col md:flex-row items-center w-full h-full absolute inset-0">
               <div class="w-full md:w-1/2 h-[368px] md:h-full overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=1000" 
+                <img src="https://mustikessv.com/cdn/shop/files/ChatGPTImageSep29_2026_01_49_26PM.png?v=1790669978" 
                      alt="The Executive Tote and Zip Wallet Duo" 
                      class="w-full h-full object-cover">
               </div>
@@ -589,7 +586,7 @@
             <!-- Slide 2 -->
             <div class="weekly-special-slide opacity-0 duration-500 flex flex-col md:flex-row items-center w-full h-full absolute inset-0 pointer-events-none">
               <div class="w-full md:w-1/2 h-[368px] md:h-full overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&q=80&w=1000" 
+                <img src="https://sulafah.com.pk/cdn/shop/articles/Luxurious_Embellished_Bridal_Clutch_Collection.png?v=1793613435&width=1024" 
                      alt="Bridal Soiree Clutch and Jewelry Case Set" 
                      class="w-full h-full object-cover">
               </div>
@@ -613,7 +610,7 @@
             <!-- Slide 3 -->
             <div class="weekly-special-slide opacity-0 duration-500 flex flex-col md:flex-row items-center w-full h-full absolute inset-0 pointer-events-none">
               <div class="w-full md:w-1/2 h-[368px] md:h-full overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=1000" 
+                <img src="https://tobebright.com/wp-content/uploads/2017/07/DSC_1668.jpg" 
                      alt="Jetsetter Convertible Leather Backpack Set" 
                      class="w-full h-full object-cover">
               </div>
@@ -783,7 +780,7 @@
           
           <!-- Post 1 -->
           <div class="group relative aspect-square rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md">
-            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&q=80&w=500" alt="Customer styling Velora tote" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIHihiAvCuwr6Y-8NlFvpTS6Cr2D2eSFT56sj8RD84A9GtS3qFn3q8bA8g&s=10" alt="Customer styling Velora tote" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <div class="absolute inset-0 bg-slate-955/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center text-white">
               <i data-lucide="instagram" class="w-5 h-5 text-brand-primary mb-2"></i>
               <p class="text-[10px] font-bold">@parisian_chloe</p>
@@ -797,7 +794,7 @@
 
           <!-- Post 2 -->
           <div class="group relative aspect-square rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md">
-            <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&q=80&w=500" alt="Evening clutch gala style" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <img src="https://i.ebayimg.com/images/g/KocAAeSwFU1p~~vF/s-l1200.webp" alt="Evening clutch gala style" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <div class="absolute inset-0 bg-slate-955/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center text-white">
               <i data-lucide="instagram" class="w-5 h-5 text-brand-primary mb-2"></i>
               <p class="text-[10px] font-bold">@mila_couture</p>
@@ -811,7 +808,7 @@
 
           <!-- Post 3 -->
           <div class="group relative aspect-square rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md">
-            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=500" alt="Italian leather hardware closeup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <img src="https://vonbaer.com/cdn/shop/files/von-baer-diplomat-mens-luxury-leather-briefcase-brown-businessman-mercedes-s-class-lifestyle.jpg?v=1787055362&width=500" alt="Italian leather hardware closeup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <div class="absolute inset-0 bg-slate-955/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center text-white">
               <i data-lucide="instagram" class="w-5 h-5 text-brand-primary mb-2"></i>
               <p class="text-[10px] font-bold">@luxe_diaries</p>
@@ -825,7 +822,7 @@
 
           <!-- Post 4 -->
           <div class="group relative aspect-square rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md">
-            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=500" alt="Verona leather backpack commute" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <img src="https://vonbaer.com/cdn/shop/files/von-baer-liberty-mens-leather-backpack-black-back-view-yachts-background.jpg?v=1793189143&width=575" alt="Verona leather backpack commute" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <div class="absolute inset-0 bg-slate-955/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center text-white">
               <i data-lucide="instagram" class="w-5 h-5 text-brand-primary mb-2"></i>
               <p class="text-[10px] font-bold">@travel_with_aria</p>
@@ -839,7 +836,7 @@
 
           <!-- Post 5 -->
           <div class="group relative aspect-square rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md">
-            <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&q=80&w=500" alt="Boutique closet purse collection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaFrHmCR-5p7S8eu3VXzZ6PkpIswY4uKSNnYW8a8SnZtjj-MIt6AylEys&s=10" alt="Boutique closet purse collection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <div class="absolute inset-0 bg-slate-955/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center text-white">
               <i data-lucide="instagram" class="w-5 h-5 text-brand-primary mb-2"></i>
               <p class="text-[10px] font-bold">@vivian_wardrobe</p>
@@ -853,7 +850,7 @@
 
           <!-- Post 6 -->
           <div class="group relative aspect-square rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md">
-            <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&q=80&w=500" alt="Luxury handbag gift unboxing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <img src="https://img.ltwebstatic.com/v4/j/spmp/2026/07/30/07/17853906741fb48ad88979af3163549da12be419d2_thumbnail_750x999.jpg" alt="Luxury handbag gift unboxing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <div class="absolute inset-0 bg-slate-955/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center text-white">
               <i data-lucide="instagram" class="w-5 h-5 text-brand-primary mb-2"></i>
               <p class="text-[10px] font-bold">@gifted_elegance</p>

@@ -60,30 +60,30 @@
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-955 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
 
-  <!-- ================= HEADER & NAVIGATION ================= -->
+    <!-- ================= HEADER & NAVIGATION ================= -->
   <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
     
     <!-- Top Luxury Announcement Ribbon -->
-    <div class="bg-slate-955 text-slate-300 dark:bg-black dark:text-slate-300 border-b border-rose-500/10 dark:border-white/5 py-1.5 px-4 text-xs tracking-wide">
-      <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <div class="bg-slate-955 text-slate-300 dark:bg-black dark:text-slate-300 border-b border-rose-500/10 dark:border-white/5 py-1.5 px-3 sm:px-4 text-xs tracking-wide overflow-hidden">
+      <div class="max-w-7xl mx-auto flex items-center justify-center sm:justify-between">
         
         <!-- Left: Perks with sparkles -->
-        <div class="flex items-center space-x-2.5 rtl:space-x-reverse text-[11px] sm:text-xs">
-          <span class="inline-flex items-center text-rose-400 font-semibold">
-            <i data-lucide="sparkles" class="w-3.5 h-3.5 mr-1.5 rtl:ml-1.5 rtl:mr-0 text-brand-primary"></i>
-            Complimentary Insured Courier &amp; Monogramming
+        <div class="flex items-center space-x-2 rtl:space-x-reverse text-[11px] sm:text-xs truncate">
+          <span class="inline-flex items-center text-rose-400 font-semibold truncate">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 mr-1.5 rtl:ml-1.5 rtl:mr-0 text-brand-primary flex-shrink-0"></i>
+            <span class="truncate">Complimentary Insured Courier &amp; Monogramming</span>
           </span>
           <span class="hidden md:inline text-slate-600 dark:text-slate-700">•</span>
           <span class="hidden md:inline text-slate-400">450 Madison Ave Flagship Atelier</span>
         </div>
 
         <!-- Right: Atelier Hotline & Hours -->
-        <div class="flex items-center space-x-4 rtl:space-x-reverse text-[11px] sm:text-xs">
-          <a href="tel:+18005558356" class="hover:text-rose-400 transition-colors hidden sm:flex items-center space-x-1.5 rtl:space-x-reverse text-slate-300 dark:text-slate-400">
+        <div class="hidden sm:flex items-center space-x-4 rtl:space-x-reverse text-[11px] sm:text-xs flex-shrink-0">
+          <a href="tel:+18005558356" class="hover:text-rose-400 transition-colors flex items-center space-x-1.5 rtl:space-x-reverse text-slate-300 dark:text-slate-400">
             <i data-lucide="phone" class="w-3 h-3 text-rose-400"></i>
             <span>+1 (800) 555-VELO</span>
           </a>
-          <span class="hidden sm:inline text-slate-700">|</span>
+          <span class="text-slate-700">|</span>
           <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             <span class="text-slate-300 dark:text-slate-400">Mon - Sat: 10AM - 7PM</span>
@@ -99,10 +99,10 @@
         <div class="flex items-center justify-between h-20">
           
           <!-- Brand Logo -->
-          <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group">
-            <div class="relative w-11 h-11 rounded-full p-[2px] bg-gradient-to-tr from-brand-primary via-rose-400 to-amber-300 shadow-md shadow-rose-500/20 group-hover:shadow-rose-500/40 transition-all">
+          <a href="index.html" class="flex items-center space-x-2.5 sm:space-x-3 rtl:space-x-reverse group flex-shrink-0">
+            <div class="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full p-[2px] bg-gradient-to-tr from-brand-primary via-rose-400 to-amber-300 shadow-md shadow-rose-500/20 group-hover:shadow-rose-500/40 transition-all flex-shrink-0">
               <div class="w-full h-full rounded-full bg-slate-955 dark:bg-slate-900 flex items-center justify-center text-rose-400 group-hover:scale-105 transition-transform">
-                <i data-lucide="shopping-bag" class="w-5 h-5 text-rose-300"></i>
+                <i data-lucide="shopping-bag" class="w-4 h-4 sm:w-5 sm:h-5 text-rose-300"></i>
               </div>
             </div>
             <div class="flex flex-col text-left ltr:text-left rtl:text-right">
@@ -148,11 +148,8 @@
           </div>
 
           <!-- Mobile Navigation Menu Toggle Button -->
-          <div class="flex items-center space-x-2 lg:hidden rtl:space-x-reverse">
-            <a href="enquire.html" class="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent text-white text-xs font-bold uppercase tracking-wider shadow-sm">
-              Enquire
-            </a>
-            <button id="mobile-menu-btn" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Open Menu">
+          <div class="flex items-center lg:hidden">
+            <button id="mobile-menu-btn" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex-shrink-0" aria-label="Open Menu">
               <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
           </div>
@@ -185,7 +182,7 @@
         <div class="flex flex-col pt-1">
           <a href="enquire.html" class="text-center px-4 py-3 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white text-sm font-bold uppercase tracking-wider shadow-md shadow-rose-500/25">Enquire</a>
         </div>
-        <button id="mobile-menu-close" class="absolute top-3 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white" aria-label="Close Menu">
+        <button id="mobile-menu-close" class="absolute top-3 right-4 rtl:right-auto rtl:left-4 text-slate-400 hover:text-slate-600 dark:hover:text-white" aria-label="Close Menu">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
@@ -214,7 +211,7 @@
           <!-- Right: Separate Image -->
           <div class="lg:col-span-5 flex justify-center lg:justify-end animate-fade-in-up">
             <div class="relative w-full max-w-md rounded-2xl overflow-hidden shadow-2xl border border-slate-800/80 group">
-              <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800" 
+              <img src="https://content.jdmagicbox.com/comp/indore/w1/0731px731.x731.230304162008.n7w1/catalogue/da-milano-leathers-pvt-ltd-indore-leather-product-dealers-r1op4nd6il.jpg" 
                    alt="Velora Luxury Handbag Boutique &amp; Atelier" 
                    class="w-full h-52 sm:h-60 md:h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
@@ -244,7 +241,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-slate-100 dark:border-slate-800">
               <div class="group space-y-3">
                 <div class="relative overflow-hidden rounded-xl h-28 border border-slate-200 dark:border-slate-800 shadow-sm">
-                  <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=600" alt="Full-Grain Italian Calfskin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                  <img src="https://www.29thoctober.com/wp-content/uploads/2021/01/artemis-sac-a-main-bandouliere-cuir-veau-italien-pleine-fleur-jaune-cote.jpg" alt="Full-Grain Italian Calfskin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                   <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent"></div>
                   <span class="absolute bottom-2 left-2 text-[10px] uppercase tracking-wider text-white font-bold bg-brand-primary/90 px-2 py-0.5 rounded">Full-Grain</span>
                 </div>
@@ -254,7 +251,7 @@
 
               <div class="group space-y-3">
                 <div class="relative overflow-hidden rounded-xl h-28 border border-slate-200 dark:border-slate-800 shadow-sm">
-                  <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=600" alt="Hand Saddle-Stitching" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                  <img src="https://i.ytimg.com/vi/nmbf0L2SzZw/maxresdefault.jpg" alt="Hand Saddle-Stitching" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                   <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent"></div>
                   <span class="absolute bottom-2 left-2 text-[10px] uppercase tracking-wider text-white font-bold bg-brand-primary/90 px-2 py-0.5 rounded">Artisan Sewn</span>
                 </div>
@@ -264,7 +261,7 @@
 
               <div class="group space-y-3">
                 <div class="relative overflow-hidden rounded-xl h-28 border border-slate-200 dark:border-slate-800 shadow-sm">
-                  <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&q=80&w=600" alt="18k Gold Hardware" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt_2CnBRMytHoWIEWbNbqY0taCffTpR1IVolExILQf2IqgbbTAzQMG0pI&s=10" alt="18k Gold Hardware" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                   <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent"></div>
                   <span class="absolute bottom-2 left-2 text-[10px] uppercase tracking-wider text-white font-bold bg-brand-primary/90 px-2 py-0.5 rounded">Custom Brass</span>
                 </div>
@@ -281,14 +278,14 @@
             <div class="relative space-y-4">
               <!-- Main Atelier Image Card -->
               <div class="glass-card p-3 rounded-3xl shadow-xl overflow-hidden group">
-                <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&q=80&w=900" 
+                <img src="https://cf-images.assettype.com/indulgexpress/import/2019/4/1/original/Da_Milano_Store_2.JPG?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true" 
                      alt="Velora luxury handbag showroom collection" 
                      class="rounded-2xl w-full h-auto aspect-[4/3] lg:h-[320px] object-cover object-center group-hover:scale-102 transition-transform duration-500">
               </div>
               
               <!-- Floating Overlapping Badge & Sub-Image Card -->
               <div class="sm:absolute sm:-bottom-6 sm:-left-6 sm:max-w-xs glass-card p-3 rounded-2xl shadow-2xl border border-slate-100 dark:border-slate-800 flex items-center space-x-3 rtl:space-x-reverse bg-white/95 dark:bg-slate-900/95">
-                <img src="https://images.unsplash.com/photo-1600857062241-98e5dba7f214?auto=format&fit=crop&q=80&w=300" alt="Quality inspection" class="w-16 h-16 rounded-xl object-cover flex-shrink-0 shadow-md">
+                <img src="https://imgshop.lbb.in/merchant/catalog/oaLrH4zTTYqALpwYp222_390A3177copyjpg" alt="Quality inspection" class="w-16 h-16 rounded-xl object-cover flex-shrink-0 shadow-md">
                 <div>
                   <div class="flex items-center space-x-1 text-rose-500 text-xs font-bold mb-0.5">
                     <i data-lucide="check-circle-2" class="w-3.5 h-3.5 fill-brand-primary text-white"></i>
@@ -339,7 +336,7 @@
               <i data-lucide="gem" class="w-7 h-7"></i>
             </div>
             <div>
-              <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Jewelry-Grade Hardware</h3>
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Jewelry-Grade</h3>
               <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
                 Solid brass clasps, turn-locks, and chains plated in 18k gold or palladium for lifelong luster.
               </p>
@@ -352,7 +349,7 @@
               <i data-lucide="leaf" class="w-7 h-7"></i>
             </div>
             <div>
-              <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Organic Vegetable Dyes</h3>
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Organic Dyes</h3>
               <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
                 Rich, non-toxic botanical tannins that preserve the natural breathability and aroma of full-grain leather.
               </p>
@@ -365,7 +362,7 @@
               <i data-lucide="shield-check" class="w-7 h-7"></i>
             </div>
             <div>
-              <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Lifetime Care Warranty</h3>
+              <h3 class="font-bold text-slate-900 dark:text-white text-lg mb-2">Lifetime Warranty</h3>
               <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-normal leading-relaxed">
                 Backed by our atelier repair promise covering stitching, edge glazing, and hardware replacements.
               </p>
@@ -385,7 +382,7 @@
           <div class="lg:col-span-5 relative order-last lg:order-first">
             <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-brand-primary to-brand-accent opacity-10 blur-xl dark:opacity-20"></div>
             <div class="relative glass-card p-3 rounded-3xl shadow-xl">
-              <img src="https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?auto=format&fit=crop&q=80&w=900" 
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx3XFFfMjVjyzSEckikiA5vcXSb5tp36uskzOWq5RPdrTb_iR8ufzoYC0&s=10" 
                    alt="Architectural leather handbag silhouette testing" 
                    class="rounded-2xl w-full h-auto aspect-[4/3] lg:h-[340px] lg:aspect-auto object-cover object-center">
             </div>
